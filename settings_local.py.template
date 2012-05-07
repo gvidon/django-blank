@@ -1,0 +1,22 @@
+# -*- coding: utf-8 -*-
+
+from os import path
+
+DEBUG_SQL          = True
+DEBUG              = True
+TEMPLATE_DEBUG     = DEBUG
+
+PROJECT_ROOT       = path.dirname(path.realpath(__file__))
+MEDIA_URL          = '/media/'
+STATIC_URL         = '/static/'
+
+#TINYMCE_JS_URL     = '/static/tiny_mce/tiny_mce.js'
+
+DATABASES = {
+	'default': {
+		'ENGINE'  : 'django.db.backends.mysql',
+		'NAME'    : 'mmm',
+		'USER'    : 'root',
+		'PASSWORD': 'root',
+	}
+}
