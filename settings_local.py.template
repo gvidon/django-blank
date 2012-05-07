@@ -15,8 +15,8 @@ STATIC_URL         = '/static/'
 DATABASES = {
 	'default': {
 		'ENGINE'  : 'django.db.backends.mysql',
-		'NAME'    : 'mmm',
-		'USER'    : 'root',
-		'PASSWORD': 'root',
+		'NAME'    : 'dbname',
+		'USER'    : 'dbuser',
+		'PASSWORD': 'dbpassword',
 	}
 }
