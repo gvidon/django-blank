@@ -5,13 +5,13 @@
 
 # PATH should only include /usr/* if it runs after the mountnfs.sh script
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
-DESC="The Daily Tags"
-NAME=dailytags
+DESC="Process description"
+NAME=process_name
 DAEMON=/usr/bin/python
-DAEMON_ARGS="/opt/webapps/dailytags/wsgi.py"
+DAEMON_ARGS="/path/to/wsgi.py"
 PIDFILE=/var/run/$NAME.pid
 SCRIPTNAME=/etc/init.d/$NAME
-USER=webweb
+USER=webserver
 
 # Load the VERBOSE setting and other rcS variables
 . /lib/init/vars.sh
