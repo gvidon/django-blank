@@ -12,7 +12,6 @@ THUMBS_URL         = MEDIA_URL + 'thumbs'
 
 ADMIN_MEDIA_PREFIX = '/admin/media/'
 
-# Это общее для всех
 SITE_ID            = 1
 SECRET_KEY         = ''
 
