@@ -10,8 +10,6 @@ PROJECT_ROOT       = path.dirname(path.realpath(__file__))
 MEDIA_URL          = '/media/'
 STATIC_URL         = '/static/'
 
-#TINYMCE_JS_URL     = '/static/tiny_mce/tiny_mce.js'
-
 DATABASES = {
 	'default': {
 		'ENGINE'  : 'django.db.backends.mysql',
