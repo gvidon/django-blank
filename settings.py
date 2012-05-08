@@ -14,7 +14,7 @@ ADMIN_MEDIA_PREFIX = '/admin/media/'
 
 # Это общее для всех
 SITE_ID            = 1
-SECRET_KEY         = 'hot1!ntbc$on@ypotwo5r#e9=^)jqbmc$5s-ud8$!wk^l@p&y3'
+SECRET_KEY         = ''
 
 USE_I18N           = False
 USE_L10N           = False
@@ -26,31 +26,7 @@ ROOT_URLCONF       = 'urls'
 LOGIN_URL          = '/login'
 LOGIN_REDIRECT_URL = '/'
 
-MAX_SHOW_PAGES     = 20
-PAGINATE_BY        = 10
-
-INTERNAL_IPS       = ('127.0.0.1',)
-
-DEBUG_TOOLBAR_CONFIG  = {
-	'INTERCEPT_REDIRECTS': False,
-}
-
-DEBUG_TOOLBAR_PANELS = (
-    'debug_toolbar.panels.version.VersionDebugPanel',
-    'debug_toolbar.panels.timer.TimerDebugPanel',
-    'debug_toolbar.panels.settings_vars.SettingsVarsDebugPanel',
-    'debug_toolbar.panels.headers.HeaderDebugPanel',
-    'debug_toolbar.panels.request_vars.RequestVarsDebugPanel',
-    'debug_toolbar.panels.template.TemplateDebugPanel',
-    'debug_toolbar.panels.sql.SQLDebugPanel',
-    'debug_toolbar.panels.signals.SignalDebugPanel',
-    'debug_toolbar.panels.logger.LoggingPanel',
-)
-
-MANAGERS = ADMINS = (
-	#('Elena Kantemirova', 'elena.kantemirova@gmail.com'),
-	('Gvidon Malyarov'  , 'nenegoro@gmail.com'),
-)
+MANAGERS = ADMINS = ()
 
 TEMPLATE_DIRS = (
 	os.path.join(PROJECT_ROOT, 'templates'),
@@ -71,12 +47,8 @@ TEMPLATE_LOADERS = (
 MIDDLEWARE_CLASSES = (
 	'django.middleware.csrf.CsrfViewMiddleware',
 	'django.contrib.sessions.middleware.SessionMiddleware',
-	#'django.middleware.cache.UpdateCacheMiddleware',
 	'django.middleware.common.CommonMiddleware',
-	#'django.middleware.cache.FetchFromCacheMiddleware',
 	'django.contrib.auth.middleware.AuthenticationMiddleware',
-	
-	'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 INSTALLED_APPS = (
@@ -86,9 +58,4 @@ INSTALLED_APPS = (
 	'django.contrib.sessions',
 	'django.contrib.sites',
 	'django.contrib.staticfiles',
-	
-	'debug_toolbar',
-	
-	# Изъебнулся. Весь project и есть одно приложение
-	PROJECT_ROOT.split('/')[-1]
 )
