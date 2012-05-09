@@ -1,9 +1,9 @@
 from fabric.api import cd, env, execute, hosts, local, run, sudo
 
 env.update({
-	'app_path': '/remote/path/to/django/application', # Directory must include manage.py file
-	'hosts'   : ['remote.host'],
 	'repo'    : '', # ssh URL or file system path to repo directory
+	'app_path': '/remote/path/to/django/application', # Path and host where to deploy application
+	'hosts'   : ['remote.host'],
 })
 
 # Execute local process and grab errors
