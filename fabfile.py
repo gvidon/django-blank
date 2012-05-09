@@ -1,9 +1,10 @@
 from fabric.api import cd, env, execute, hosts, local, run, sudo
 
 env.update({
-	'repo'    : '', # ssh URL or file system path to repo directory
-	'app_path': '/remote/path/to/django/application', # Path and host where to deploy application
-	'hosts'   : ['remote.host'],
+	'system_service': '', # Name of system /etc/init.d startup script
+	'repo'          : '', # ssh URL or file system path to repo directory
+	'app_path'      : '/remote/path/to/django/application', # Path and host where to deploy application
+	'hosts'         : ['remote.host'],
 })
 
 # Execute local process and grab errors
@@ -29,7 +30,7 @@ def update():
 	run_in_path(env.app_path, 'git pull origin master')
 
 def restart_service():
-	sudo('nohup service mmm restart')
+	sudo('nohup service %s restart' % (env['system_service'],))
 
 def collect_static():
 	run_in_path(env.app_path, 'python manage.py collectstatic --noinput')
